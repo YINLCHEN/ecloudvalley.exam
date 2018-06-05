@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Modal } from 'semantic-ui-react'
+import { Modal } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
 class TableModal extends Component {
     constructor(props){
@@ -17,7 +18,9 @@ class TableModal extends Component {
         });
      }
 
-    onClose = () => this.setState({open: false});
+    onClose = () => {
+        this.setState({open: false});
+    }
 
     render() {
         const ContentStr = this.state.data.itemCalories + '卡路里，蛋白質：' + this.state.data.itemProtein ;
@@ -33,4 +36,10 @@ class TableModal extends Component {
     }
 }
 
-export default TableModal;
+function mapStateToProps(state) {
+    return {
+        modalStatus: state.modalStatus
+    };
+}
+
+export default connect(mapStateToProps)(TableModal);

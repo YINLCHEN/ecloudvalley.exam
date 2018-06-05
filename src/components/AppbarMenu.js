@@ -19,17 +19,17 @@ class AppbarMenu extends Component {
         return (
         <Menu size='large' vertical style={{padding:0}}>
             <Menu.Item name='inbox' active={activeItem === 'inbox'} onClick={this.handleItemClick}>
-                <Label color='teal'>2</Label>
+                <Label color='orange'>2</Label>
                 Inbox
             </Menu.Item>
 
             <Menu.Item name='spam' active={activeItem === 'spam'} onClick={this.handleItemClick}>
-                <Label>4</Label>
+                <Label color='teal'>4</Label>
                 Spam
             </Menu.Item>
 
             <Menu.Item name='updates' active={activeItem === 'updates'} onClick={this.handleItemClick}>
-                <Label>6</Label>
+                <Label color='blue'>6</Label>
                 Updates
             </Menu.Item>
         </Menu>

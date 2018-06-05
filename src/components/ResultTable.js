@@ -33,6 +33,7 @@ class ResultTable extends Component {
     render() {
         var data = [];
         const pageIndex = this.props.pageIndex;
+        
         if(pageIndex==='inbox'){
             data = [
                 {'itemName':'Apples','itemCalories':'200','itemProtein':'123g'},
